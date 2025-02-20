@@ -1,0 +1,17 @@
+.accountHero__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 25px 25px;
+	margin-top: 50px;
+}
+.accountHero__buttons-button {
+	font-size: 36px;
+}
+.exit-block {
+	text-align: right;
+	margin-bottom: 50px;
+	position: relative;
+}
+.accountHero__exit-btn {
+	margin-top: 117px;
+}

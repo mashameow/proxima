@@ -1,0 +1,6 @@
+import './src/css/about.css'
+import './src/css/account.css'
+import './src/css/index.css'
+import './src/css/popup.css'
+import './src/css/servises.css'
+import './style.css'
