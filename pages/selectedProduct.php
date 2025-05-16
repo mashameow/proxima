@@ -45,18 +45,37 @@ if ($product_result->num_rows > 0) {
 <body>
     <header class="header">
         <div class="header__container">
-            <nav class="nav">
-                <a href="../index.html">
-                    <img src="../src/img/logo2.png" alt="logo" class="header__nav-img" />
-                </a>
-                <ul class="header__nav-menu">
-                    <a href="./about.html" class="header__nav-menu-link SoyuzGrotesk">о нас</a>
-                    <a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk">услуги</a>
-                    <a href="./page/contacts.html" class="header__nav-menu-link SoyuzGrotesk">все о заказе</a>
-                    <a href="./page/help.html" class="header__nav-menu-link SoyuzGrotesk">контакты</a>
-                </ul>
-                <a href="./account.php" class="header__nav-account SoyuzGrotesk">Личный кабинет</a>
-            </nav>
+          <nav class="nav">
+					<a href="../index.php">
+						<img
+							src="../src/img/logo2.png"
+							alt="logo"
+							class="header__nav-img"
+						/>
+					</a>
+					<ul class="header__nav-menu">
+						<a href="./about.html" class="header__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a
+							href="./contacts.html"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./account.php" class="header__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
         </div>
     </header>
     <main>
@@ -96,17 +115,30 @@ if ($product_result->num_rows > 0) {
     <footer class="footer">
         <div class="footer__container">
             <nav class="nav">
-                <a href="../index.html">
-                    <img src="../src/img/logo2.png" alt="logo" class="footer__nav-img" />
-                </a>
-                <ul class="footer__nav-menu">
-                    <a href="./about.html" class="footer__nav-menu-link SoyuzGrotesk">о нас</a>
-                    <a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk">услуги</a>
-                    <a href="./page/contacts.html" class="footer__nav-menu-link SoyuzGrotesk">все о заказе</a>
-                    <a href="./page/help.html" class="footer__nav-menu-link SoyuzGrotesk">контакты</a>
-                </ul>
-                <a href="./account.php" class="footer__nav-account SoyuzGrotesk">Личный кабинет</a>
-            </nav>
+					<a href="../index.php">
+						<img src="./src/img/logo2.png" alt="logo" class="footer__nav-img" />
+					</a>
+					<ul class="footer__nav-menu">
+						<a href="./about.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="footer__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a href="./contacts.html" class="footer__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./pages/account.php" class="footer__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
             <div class="footer__info">
                 <div class="footer__info-text">
                     <p class="footer__info-text-p SoyuzGrotesk">(903) 192-71-20 <br />(495) 33-111-33</p>

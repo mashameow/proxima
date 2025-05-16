@@ -45,27 +45,46 @@ if ($service_result->num_rows > 0) {
     <header class="header">
         <div class="header__container">
             <nav class="nav">
-                <a href="../index.html">
-                    <img src="../src/img/logo2.png" alt="logo" class="header__nav-img" />
-                </a>
-                <ul class="header__nav-menu">
-                    <a href="./about.html" class="header__nav-menu-link SoyuzGrotesk">о нас</a>
-                    <a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk">услуги</a>
-                    <a href="./page/contacts.html" class="header__nav-menu-link SoyuzGrotesk">все о заказе</a>
-                    <a href="./page/help.html" class="header__nav-menu-link SoyuzGrotesk">контакты</a>
-                </ul>
-                <a href="./account.php" class="header__nav-account SoyuzGrotesk">Личный кабинет</a>
-            </nav>
+					<a href="../index.php">
+						<img
+							src="../src/img/logo2.png"
+							alt="logo"
+							class="header__nav-img"
+						/>
+					</a>
+					<ul class="header__nav-menu">
+						<a href="./about.html" class="header__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a
+							href="./contacts.html"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./account.php" class="header__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
         </div>
     </header>
     <main>
         <section class="heroSelectedService">
             <div class="heroSelectedService__container container">
-                <h2 class="heroSelectedService__title SoyuzGrotesk section-title"><?php echo $_SESSION['nameServises']; ?></h2>
+                <h2 class="heroSelectedService__title section-title"><?php echo $_SESSION['nameServises']; ?></h2>
                 <p class="heroSelectedService__description"><?php echo $_SESSION['description']; ?></p>
-                <h3 class="heroSelectedService__text SoyuzGrotesk section-title">Особенности и достоинства:</h3>
+                <h3 class="heroSelectedProduct__text section-title">Особенности и достоинства:</h3>
                 <p class="heroSelectedService__features"><?php echo $_SESSION['features']; ?></p>
-                <h3 class="heroSelectedService__text SoyuzGrotesk section-title">Продукция:</h3>
+                <h3 class="heroSelectedProduct__text section-title">Продукция:</h3>
                 <p class="heroSelectedService__products"><?php echo $_SESSION['products']; ?></p>
                 <div class="heroSelectedService__exit exit-block">
                     <button class="heroSelectedService__exit-btn exit button" onclick="history.back();">назад</button>
@@ -90,17 +109,30 @@ if ($service_result->num_rows > 0) {
     <footer class="footer">
         <div class="footer__container">
             <nav class="nav">
-                <a href="../index.html">
-                    <img src="../src/img/logo2.png" alt="logo" class="footer__nav-img" />
-                </a>
-                <ul class="footer__nav-menu">
-                    <a href="./about.html" class="footer__nav-menu-link SoyuzGrotesk">о нас</a>
-                    <a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk">услуги</a>
-                    <a href="./page/contacts.html" class="footer__nav-menu-link SoyuzGrotesk">все о заказе</a>
-                    <a href="./page/help.html" class="footer__nav-menu-link SoyuzGrotesk">контакты</a>
-                </ul>
-                <a href="./account.php" class="footer__nav-account SoyuzGrotesk">Личный кабинет</a>
-            </nav>
+					<a href="../index.php">
+						<img src="./src/img/logo2.png" alt="logo" class="footer__nav-img" />
+					</a>
+					<ul class="footer__nav-menu">
+						<a href="./about.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="footer__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a href="./contacts.html" class="footer__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./pages/account.php" class="footer__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
             <div class="footer__info">
                 <div class="footer__info-text">
                     <p class="footer__info-text-p SoyuzGrotesk">(903) 192-71-20 <br />(495) 33-111-33</p>

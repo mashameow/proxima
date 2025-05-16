@@ -1,0 +1,169 @@
+* {
+	box-sizing: border-box;
+}
+
+.admin {
+	display: flex;
+}
+
+.admin__nav {
+	width: 250px;
+	border-right: 1px solid #00000020;
+	background-color: #fff;
+	padding: 20px;
+}
+
+.admin__nav-link {
+	font-family: 'SoyuzGrotesk';
+	color: #000;
+	font-size: 26px;
+	text-decoration: none;
+}
+
+.admin__nav-list li {
+	margin-top: 15px;
+}
+
+.admin__nav-img {
+	max-width: 151px;
+	padding-top: 35px;
+}
+
+.dashboard {
+	flex: 1;
+	background-color: #fff;
+	padding: 30px;
+}
+
+.admin__tite {
+	margin-bottom: 30px;
+	color: #000;
+	font-family: 'SoyuzGrotesk';
+	font-size: 64px;
+}
+
+.filter__block {
+	background-color: #e503871d;
+	border-radius: 10px;
+	padding: 20px;
+	margin-bottom: 35px;
+}
+
+.dashboard__filter {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 35px;
+	margin-bottom: 20px;
+}
+
+.dashboard__filter label {
+	display: flex;
+	flex-direction: column;
+	font-weight: bold;
+}
+
+.dashboard__filter input,
+.dashboard__reset-btn {
+	padding: 6px 12px;
+	border-radius: 30px;
+	border: 1px solid #ccc;
+}
+
+.dashboard__filter-date {
+	margin-top: 20px;
+	font-family: 'Raleway';
+}
+
+.dashboard__stats {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.dashboard__stat {
+	flex: 1 1 200px;
+	padding: 10px 20px;
+	background-color: #fff;
+	border-radius: 10px;
+	text-align: center;
+	box-shadow: 0px 0px 15px 4px #00000020;
+}
+
+.dasboard__stat-title {
+	font-size: 28px;
+	color: #000;
+	font-family: 'SoyuzGrotesk';
+	padding-bottom: 5px;
+}
+
+.dashboard__chart {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+
+.dashboard__chart-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	width: 100%;
+}
+
+.dashboard__chart-block {
+	flex: 1 1 45%;
+	min-width: 300px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 15px 4px #00000020;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.chart-title {
+	font-size: 18px;
+	font-weight: 600;
+	color: #7b7b7b;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.chart-fix {
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.chart-fix canvas {
+	width: 100% !important;
+	max-height: 220px !important;
+}
+
+canvas {
+	width: 100% !important;
+	height: auto !important;
+	display: block;
+}
+label {
+	font-family: 'Raleway';
+}
+
+.dashboard__heroHeader {
+	justify-content: left;
+	gap: 35px;
+}
+.exportPDF-btn {
+	margin-bottom: 10px;
+}
+.exportPopup__block {
+	position: fixed;
+	top: 35%;
+	left: 37%;
+}
+.exportPopup__block-text {
+	margin-top: 25px;
+}

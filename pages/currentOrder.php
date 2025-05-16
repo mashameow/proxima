@@ -42,17 +42,36 @@ $order_result = $order_stmt->get_result();
 <header class="header">
     <div class="header__container">
         <nav class="nav">
-            <a href="../index.html">
-                <img src="../src/img/logo2.png" alt="logo" class="header__nav-img">
-            </a>
-            <ul class="header__nav-menu">
-                <li><a href="./about.html" class="header__nav-menu-link SoyuzGrotesk">О нас</a></li>
-                <li><a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk">Услуги</a></li>
-                <li><a href="./page/contacts.html" class="header__nav-menu-link SoyuzGrotesk">Все о заказе</a></li>
-                <li><a href="./page/help.html" class="header__nav-menu-link SoyuzGrotesk">Контакты</a></li>
-            </ul>
-            <a href="./account.php" class="header__nav-account SoyuzGrotesk">Личный кабинет</a>
-        </nav>
+					<a href="../index.php">
+						<img
+							src="../src/img/logo2.png"
+							alt="logo"
+							class="header__nav-img"
+						/>
+					</a>
+					<ul class="header__nav-menu">
+						<a href="./about.html" class="header__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="header__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a
+							href="./contacts.html"
+							class="header__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./account.php" class="header__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
     </div>
 </header>
 
@@ -61,6 +80,7 @@ $order_result = $order_stmt->get_result();
         <div class="heroCurrentOrder__container container">
             <h2 class="heroCurrentOrder__title SoyuzGrotesk section-title">Статус заказа</h2>
             <p class="heroCurrentOrder__text">В этом разделе вы можете просмотреть статус ваших заказов</p>
+            
             <div class="heroCurrentOrder__info">
 
             <?php
@@ -69,17 +89,17 @@ $order_result = $order_stmt->get_result();
                     echo '<div class="heroCurrentOrder__block">';
                     echo '<h3 class="heroCurrentOrder__block-title">Заказ №' . htmlspecialchars($order['ID_orders']) . '</h3>';
                     echo '<p class="heroCurrentOrder__block-text">';
-                    echo 'Номер заказа: ' . htmlspecialchars($order['number']) . ', ';
-                    echo 'Дата заказа: ' . htmlspecialchars($order['created_at']) . ', ';
-                    echo 'Услуга: ' . htmlspecialchars($order['nameServises']) . ', ';
-                    echo 'Продукция: ' . htmlspecialchars($order['nameProduct']) . ', ';
-                    echo 'Количество: ' . htmlspecialchars($order['quantity']) . ' шт., ';
-                    echo 'Статус: ' . htmlspecialchars($order['name']) . ', ';
-                    echo 'Ожидаемая дата завершения: ' . htmlspecialchars($order['completionDate']) . ', ';
-                    echo 'Цена (до учета скидок): ' . htmlspecialchars($order['price']) . ' руб.';
-                    echo 'Списанные бонусы: ' . htmlspecialchars($order['bonusesMinus']) . ', ';
-                    echo 'Полученные бонусы: ' . htmlspecialchars($order['bonusesPlus']) . ', ';
-                    echo 'Итоговая цена: ' . htmlspecialchars($order['total_price']) . ', ';
+                    echo 'Номер заказа: ' . htmlspecialchars($order['number']) . ', </br>';
+                    echo 'Дата заказа: ' . htmlspecialchars($order['created_at']) . ', </br>';
+                    echo 'Услуга: ' . htmlspecialchars($order['nameServises']) . ', </br>';
+                    echo 'Продукция: ' . htmlspecialchars($order['nameProduct']) . ', </br>';
+                    echo 'Количество: ' . htmlspecialchars($order['quantity']) . ' шт., </br>';
+                    echo 'Статус: ' . htmlspecialchars($order['name']) . ', </br>';
+                    echo 'ата завершения: ' . htmlspecialchars($order['completionDate']) . ', </br>';
+                    echo 'Цена (до учета скидок): ' . htmlspecialchars($order['price']) . ' руб.</br>';
+                    echo 'Списанные бонусы: ' . htmlspecialchars($order['bonusesMinus']) . ', </br>';
+                    echo 'Полученные бонусы: ' . htmlspecialchars($order['bonusesPlus']) . ', </br>';
+                    echo 'Итоговая цена: ' . htmlspecialchars($order['total_price']) . ', </br>';
                     echo '</p>';
                     echo '</div>';
                 }
@@ -102,17 +122,30 @@ $order_result = $order_stmt->get_result();
 <footer class="footer">
     <div class="footer__container">
         <nav class="nav">
-            <a href="../index.html">
-                <img src="../src/img/logo2.png" alt="logo" class="footer__nav-img">
-            </a>
-            <ul class="footer__nav-menu">
-                <li><a href="./about.html" class="footer__nav-menu-link SoyuzGrotesk">О нас</a></li>
-                <li><a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk">Услуги</a></li>
-                <li><a href="./page/contacts.html" class="footer__nav-menu-link SoyuzGrotesk">Все о заказе</a></li>
-                <li><a href="./page/help.html" class="footer__nav-menu-link SoyuzGrotesk">Контакты</a></li>
-            </ul>
-            <a href="./account.php" class="footer__nav-account SoyuzGrotesk">Личный кабинет</a>
-        </nav>
+					<a href="../index.php">
+						<img src="./src/img/logo2.png" alt="logo" class="footer__nav-img" />
+					</a>
+					<ul class="footer__nav-menu">
+						<a href="./about.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>о нас</a
+						>
+						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
+							>услуги</a
+						>
+						<a
+							href="./aboutOrder.php"
+							class="footer__nav-menu-link SoyuzGrotesk"
+							>все о заказе</a
+						>
+						<a href="./contacts.html" class="footer__nav-menu-link SoyuzGrotesk"
+							>контакты</a
+						>
+					</ul>
+
+					<a href="./pages/account.php" class="footer__nav-account SoyuzGrotesk"
+						>Личный кабинет</a
+					>
+				</nav>
     </div>
 </footer>
 <script type="module" src="/main.js"></script>

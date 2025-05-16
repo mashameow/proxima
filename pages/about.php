@@ -14,7 +14,7 @@ session_start();
 		<header class="header">
 			<div class="header__container">
 				<nav class="nav">
-					<a href="../index.html">
+					<a href="../index.php">
 						<img
 							src="../src/img/logo2.png"
 							alt="logo"
@@ -29,12 +29,12 @@ session_start();
 							>услуги</a
 						>
 						<a
-							href="./page/contacts.html"
+							href="./aboutOrder.php"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>все о заказе</a
 						>
 						<a
-							href="./page/help.html"
+							href="./contacts.html"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>контакты</a
 						>
@@ -235,8 +235,7 @@ session_start();
 					<p class="partnersAbout__text">
 						Спасибо клиентам, с которыми работаем давно
 					</p>
-					<div class="partnersAbout__block"></div>
-					<button class="button partnersAbout__button">показать еще</button>
+					<div id="logos" class="partnersAbout__block "></div>
 				</div>
 			</section>
 			<section class="order">
@@ -248,10 +247,9 @@ session_start();
 						<p class="order__info-text">
 							Мы рады приветствовать вас на сайте нашей типографии! <br />
 							Для вашего удобства мы подготовили раздел
-							<RouterLink
-								to="/all-about-order"
+							<span
 								class="order__info-text-link SoyuzGrotesk"
-								>все о заказе</RouterLink
+								>все о заказе</span
 							>, где вы сможете найти всю необходимую информацию о том, как
 							оформить заказ и пройти все его этапы.
 						</p>
@@ -323,33 +321,27 @@ session_start();
 		<footer class="footer">
 			<div class="footer__container">
 				<nav class="nav">
-					<a href="../index.html">
-						<img
-							src="../src/img/logo2.png"
-							alt="logo"
-							class="footer__nav-img"
-						/>
+					<a href="../index.php">
+						<img src="./src/img/logo2.png" alt="logo" class="footer__nav-img" />
 					</a>
 					<ul class="footer__nav-menu">
-						<a href="./about.html" class="footer__nav-menu-link SoyuzGrotesk"
+						<a href="./about.php" class="footer__nav-menu-link SoyuzGrotesk"
 							>о нас</a
 						>
 						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
 							>услуги</a
 						>
 						<a
-							href="./page/contacts.html"
+							href="./aboutOrder.php"
 							class="footer__nav-menu-link SoyuzGrotesk"
 							>все о заказе</a
 						>
-						<a
-							href="./page/help.html"
-							class="footer__nav-menu-link SoyuzGrotesk"
+						<a href="./contacts.html" class="footer__nav-menu-link SoyuzGrotesk"
 							>контакты</a
 						>
 					</ul>
 
-					<a href="/account" class="footer__nav-account SoyuzGrotesk"
+					<a href="./pages/account.php" class="footer__nav-account SoyuzGrotesk"
 						>Личный кабинет</a
 					>
 				</nav>
@@ -389,6 +381,8 @@ session_start();
 				</div>
 			</div>
 		</footer>
+		
 		<script type="module" src="/main.js"></script>
+		<script type="module" src="../src/js/api_client_logos.js"></script>
 	</body>
 </html>

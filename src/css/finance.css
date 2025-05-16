@@ -1,0 +1,60 @@
+.heroFinance__table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 35px;
+	table-layout: fixed;
+	cursor: default;
+}
+
+.heroFinance__table-row {
+	border: 1px solid #828282;
+}
+
+.heroFinance__table-cell {
+	padding: 10px;
+	border: 1px solid #828282;
+	text-align: left;
+}
+
+.heroFinance__table-header {
+	background-color: #e5e5e5;
+	font-weight: bold;
+}
+
+.heroFinance__table-footer {
+	background-color: #e5e5e5;
+	font-weight: bold;
+}
+
+.heroFinance__table-footer-label {
+	text-align: right;
+}
+
+.heroFinance__table-footer-value {
+	text-align: left;
+}
+.table__name {
+	font-family: 'SoyuzGrotesk';
+	text-align: center;
+	font-size: 32px;
+}
+.heroFinance__table-footer-value {
+	padding-right: 20px;
+	text-align: right;
+}
+.heroFinance__table-footer-label {
+	text-align: left;
+}
+.table__number {
+	text-align: left;
+	padding-left: 20px;
+}
+.heroHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+.heroFinance__header-button-btn {
+	margin-top: 64px;
+}

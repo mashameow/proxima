@@ -10,6 +10,6 @@ $_SESSION = [];
 session_destroy();
 
 // Перенаправляем пользователя на главную страницу или страницу входа
-header("Location: http://localhost:5173/index.html");
+header("Location: http://localhost:5173/index.php");
 exit();
 ?>

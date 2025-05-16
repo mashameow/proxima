@@ -1,0 +1,33 @@
+.heroBonuses__subtitle {
+	font-size: 36px;
+	font-family: 'SoyuzGrotesk';
+	margin: 15px 0px 35px 0px;
+}
+
+.heroBonuses__bonuses {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 50px;
+}
+
+.heroBonuses__bonuses-title {
+	color: #e93ea3;
+	font-family: 'SoyuzGrotesk';
+	font-size: 64px;
+}
+.heroBonuses__bonuses-text {
+	font-family: 'SoyuzGrotesk';
+}
+
+.heroBonuses__infoTitle {
+	font-family: 'SoyuzGrotesk';
+}
+.heroBonuses__info-span {
+	color: #e93ea3;
+	font-size: 36px;
+	font-family: 'SoyuzGrotesk';
+}
+.heroBonuses__textLast {
+	margin-top: 50px;
+}

@@ -1,0 +1,33 @@
+.heroUpload__form-file {
+	display: flex;
+	justify-content: space-between;
+	background-color: #000;
+	border-radius: 30px;
+	padding: 16px 20px 6px 20px;
+	margin: 50px 0px 10px 0px;
+}
+.heroUpload__form-file-lable {
+	color: #fff;
+}
+.heroUpload__form-file-input {
+	display: none;
+}
+.heroUpload__form-file-custom {
+	cursor: pointer;
+	display: inline-block;
+}
+.heroUpload__form-custom-comment {
+	width: 1262px;
+	height: 58px;
+	padding: 14px 20px 6px 20px;
+	color: #fff;
+	border-radius: 30px;
+	background-color: #000;
+	text-transform: none;
+	font-size: 24px;
+	font-family: 'Raleway';
+	resize: none;
+}
+.heroUpload__form-custom-comment::placeholder {
+	color: #fff;
+}

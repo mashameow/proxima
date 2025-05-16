@@ -35,7 +35,7 @@ mysqli_close($db);
 		<header class="header">
 			<div class="header__container">
 				<nav class="nav">
-					<a href="../index.html">
+					<a href="../index.php">
 						<img
 							src="../src/img/logo2.png"
 							alt="logo"
@@ -50,12 +50,12 @@ mysqli_close($db);
 							>услуги</a
 						>
 						<a
-							href="./page/contacts.html"
+							href="./aboutOrder.php"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>все о заказе</a
 						>
 						<a
-							href="./page/help.html"
+							href="./contacts.html"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>контакты</a
 						>
@@ -237,33 +237,27 @@ mysqli_close($db);
 		<footer class="footer">
 			<div class="footer__container">
 				<nav class="nav">
-					<a href="../index.html">
-						<img
-							src="../src/img/logo2.png"
-							alt="logo"
-							class="footer__nav-img"
-						/>
+					<a href="../index.php">
+						<img src="./src/img/logo2.png" alt="logo" class="footer__nav-img" />
 					</a>
 					<ul class="footer__nav-menu">
-						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
+						<a href="./about.php" class="footer__nav-menu-link SoyuzGrotesk"
 							>о нас</a
 						>
 						<a href="./servises.php" class="footer__nav-menu-link SoyuzGrotesk"
 							>услуги</a
 						>
 						<a
-							href="./page/contacts.html"
+							href="./aboutOrder.php"
 							class="footer__nav-menu-link SoyuzGrotesk"
 							>все о заказе</a
 						>
-						<a
-							href="./page/help.html"
-							class="footer__nav-menu-link SoyuzGrotesk"
+						<a href="./contacts.html" class="footer__nav-menu-link SoyuzGrotesk"
 							>контакты</a
 						>
 					</ul>
 
-					<a href="./account.php" class="footer__nav-account SoyuzGrotesk"
+					<a href="./pages/account.php" class="footer__nav-account SoyuzGrotesk"
 						>Личный кабинет</a
 					>
 				</nav>

@@ -4,6 +4,14 @@
 @import './src/css/account.css';
 @import './src/css/servises.css';
 @import './src/css/popup.css';
+@import './src/css/aboutOrder.css';
+@import './src/css/contacts.css';
+@import './src/css/currentOrder.css';
+@import './src/css/bonuses.css';
+@import './src/css/upload.css';
+@import './src/css/calculate.css';
+@import './src/css/finance.css';
+@import './src/css/admin/admin.css';
 
 * {
 	padding: 0;
@@ -83,6 +91,19 @@ main {
 	color: #fff;
 	border: 3px solid #9bd00c;
 }
+.gradient-btn {
+	background: linear-gradient(140deg, #9bd00c, #e93ea3);
+	color: #fff;
+	padding: 7px 13px 8px 13px;
+	border-radius: 30px;
+	border: none;
+	transition: 0.4s ease-in-out;
+	font-size: 24px;
+	font-family: 'SoyuzGrotesk';
+}
+.gradient-btn:hover {
+	transform: scale(1.1);
+}
 .exit {
 	background: #fff;
 	color: #000;
@@ -123,7 +144,24 @@ main {
 a {
 	text-decoration: none;
 	color: #000;
+	transition: color 0.3s ease;
 }
+.header__nav-menu-link:hover,
+.header__nav-account:hover,
+.footer__nav-menu-link:hover,
+.footer__nav-account:hover {
+	background: linear-gradient(90deg, #9bd00c, #e93ea3);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	transition: 0.3s ease;
+}
+.header__nav-menu-link,
+.header__nav-account,
+.footer__nav-menu-link,
+.footer__nav-account {
+	transition: 0.3s ease;
+}
+
 li {
 	list-style: none;
 }
@@ -135,7 +173,7 @@ li {
 	color: #000;
 	font-family: 'SoyuzGrotesk';
 	font-size: 64px;
-	padding: 50px 0 20px 0;
+	margin: 50px 0 20px 0;
 }
 
 .calculate {
@@ -213,7 +251,15 @@ li {
 	background-color: #000;
 	margin: 50px 0;
 }
+.orderForm {
+	background-color: #000;
+	margin: 50px 0;
+}
 .questions__container {
+	padding-bottom: 50px;
+	justify-content: center;
+}
+.orderForm__container {
 	padding-bottom: 50px;
 	justify-content: center;
 }
@@ -236,6 +282,21 @@ li {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+	filter: drop-shadow(0px 0px 16px #e93ea3);
+}
+.orderForm__title {
+	color: #9bd00c;
+}
+.orderForm__info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 35px;
+}
+.orderForm__info-inpus-input {
+	display: flex;
+	flex-direction: column;
+	filter: drop-shadow(0px 0px 16px #9bd00c);
+	align-items: flex-start;
 }
 .input {
 	padding: 10px 0 10px 20px;
@@ -244,7 +305,7 @@ li {
 	border: none;
 	font-family: 'Raleway';
 	color: #000;
-	filter: drop-shadow(0px 0px 16px #e93ea3);
+
 	font-size: 24px;
 }
 input::placeholder {
@@ -256,11 +317,29 @@ input::placeholder {
 	resize: none;
 	width: 875px;
 	height: 220px;
+	filter: drop-shadow(0px 0px 16px #e93ea3);
 }
 .questions__info-inpus-input:nth-child(2) {
 	margin: 35px 0;
 }
 .questions__btn-container {
+	display: flex;
+	justify-content: center;
+}
+.orderForm__btn-container {
+	display: flex;
+	justify-content: center;
+}
+.orderForm__info-textarea {
+	resize: none;
+	width: 875px;
+	filter: drop-shadow(0px 0px 16px #9bd00c);
+	height: 220px;
+}
+.orderForm__info-inpus-input:nth-child(2) {
+	margin: 35px 0;
+}
+.orderForm__info-container {
 	display: flex;
 	justify-content: center;
 }
@@ -292,14 +371,8 @@ input::placeholder {
 	column-gap: 35px;
 }
 .mailing__info-input {
-	padding: 10px 0 10px 20px;
-	width: 305px;
-	border-radius: 25px;
-	border: none;
-	font-family: 'Raleway';
 	color: #000;
 	filter: drop-shadow(0px 0px 16px #9bd00c);
-	font-size: 24px;
 }
 input::placeholder {
 	font-family: 'Raleway';
@@ -327,22 +400,7 @@ input::placeholder {
 .heroSelectedProduct__exit-btn {
 	margin-bottom: 0px;
 }
-.heroCurrentOrder__block {
-	max-width: 1215px;
-	padding: 10px 20px 20px 20px;
-	border-radius: 30px;
-	background-color: #000;
-	color: #fff;
-	margin-top: 35px;
-}
-.heroCurrentOrder__block-title {
-	margin-bottom: 20px;
-	font-family: 'SoyuzGrotesk';
-	font-size: 36px;
-}
-.heroCurrentOrder__info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+
+.hero__info-button-servises {
+	margin-top: 30px;
 }

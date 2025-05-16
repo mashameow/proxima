@@ -1,0 +1,17 @@
+.heroCurrentOrder__block {
+	padding: 10px 20px 10px 20px;
+	border-radius: 30px;
+	background-color: #000;
+	color: #fff;
+	margin-top: 35px;
+}
+.heroCurrentOrder__block-title {
+	font-family: 'SoyuzGrotesk';
+	font-size: 36px;
+	margin-bottom: 20px;
+}
+.heroCurrentOrder__info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}

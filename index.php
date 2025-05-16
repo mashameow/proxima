@@ -1,3 +1,20 @@
+<?php
+// Подключение к базе данных
+$db = mysqli_connect('localhost', 'root', '', 'proxima');
+
+// Проверка соединения
+if (!$db) {
+    die("Ошибка подключения: " . mysqli_connect_error());
+}
+
+
+// Выполнение SQL-запроса для получения первых 6 продуктов
+$sql = "SELECT ID_products, nameProduct, description, specifications, image, icon FROM products LIMIT 6";
+$resultProd = mysqli_query($db, $sql);
+
+// Закрытие соединения с базой данных
+mysqli_close($db);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -7,6 +24,7 @@
 		<title>проксима</title>
 	</head>
 	<body>
+		
 		<header class="header">
 			<div class="header__container">
 				<nav class="nav">
@@ -15,22 +33,22 @@
 					</a>
 					<ul class="header__nav-menu">
 						<a
-							href="./pages/about.html"
+							href="./pages/about.php"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>о нас</a
 						>
 						<a
-							href="./pages/servises.html"
+							href="./pages/servises.php"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>услуги</a
 						>
 						<a
-							href="./page/contacts.html"
+							href="./pages/aboutOrder.php"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>все о заказе</a
 						>
 						<a
-							href="./page/help.html"
+							href="./pages/contacts.html"
 							class="header__nav-menu-link SoyuzGrotesk"
 							>контакты</a
 						>
@@ -53,7 +71,9 @@
 							услуг в области оперативной полиграфии и тиражирования, а также
 							производство сувенирной продукции…
 						</p>
-						<a href="" class="button hero__info-button">подробнее о нас</a>
+						<a href="./pages/about.php" class="button hero__info-button"
+							>подробнее о нас</a
+						>
 					</div>
 					<img
 						src="./src/img/background.png"
@@ -74,12 +94,15 @@
 								alt="people"
 								class="partners__block-left-img"
 							/>
-							<a href="" class="button hero__info-button">подробнее</a>
+							<a href="./pages/about.php" class="button hero__info-button"
+								>подробнее</a
+							>
 						</div>
 						<div class="partners__block-info">
 							<p class="partners__block-info-text">
 								Спасибо клиентам, с которыми работаем давно
 							</p>
+							<div id="logos" data-limit="12" class="partnersAbout__block partners__block-info-images"></div>
 						</div>
 					</div>
 				</div>
@@ -151,7 +174,7 @@
 								alt="hand"
 								class="services__block-image-img"
 							/>
-							<a href="" class="button hero__info-button"
+							<a href="./pages/servises.php" class="button hero__info-button"
 								>подробнее об услугах</a
 							>
 						</div>
@@ -166,95 +189,48 @@
 					</p>
 					<div class="products__block">
 						<div class="products__block-cards">
-							<ProdCard
-								v-for="{ title, comment, imgUrl } in ProductCard"
-								:title="title"
-								:comment="comment"
-								:img-url="imgUrl"
-							/>
+						<div class="ourProducts__cards">
+						<?php
+						// Проверка, есть ли результаты
+						if (mysqli_num_rows($resultProd) > 0) {
+    						// Цикл для перебора всех продуктов
+    						while ($product = mysqli_fetch_assoc($resultProd)) {
+        						?>
+        						<a href='./selectedProduct.php?id=<?= $product['ID_products'] ?>' class="ourProducts__cards-card ourProducts__cards-card-text-title">
+            						<div class="ourProducts__cards-card-icon">
+                						<img
+                    						src="../src/icon/products/<?php echo htmlspecialchars($product['icon']); ?>"
+                    						alt="<?php echo htmlspecialchars($product['nameProduct']); ?>"
+                    						class="ourProducts__cards-card-icon-img"
+                						/>
+            						</div>
+            						<?php echo htmlspecialchars($product['nameProduct']); ?>
+        						</a>
+        						<?php
+    						}
+						}
+						?>
+						
+					</div>
 						</div>
-						<a href="" class="button hero__info-button">наша продукция</a>
-					</div>
-				</div>
-			</section>
-			<section class="upload">
-				<div class="upload__container container">
-					<div class="upload__info">
-						<h2 class="upload__info-title SoyuzGrotesk section-title">
-							Загрузите свой проект
-						</h2>
-						<p class="upload__info-text">
-							На нашем сайте вы можете легко загрузить проект для печати. <br />
-							Наша команда профессионалов рассмотрит ваш проект и свяжется с
-							вами в кратчайшие сроки для уточнения деталей.
-						</p>
-						<p class="upload__info-text">
-							Мы ценим ваше время и готовы предложить помощь на каждом этапе!
-						</p>
-						<a href="" class="button hero__info-button">загрузить проект</a>
-					</div>
-					<img src="./src/img/upload.png" alt="upload" class="upload__img" />
-				</div>
-			</section>
-
-			<section class="calculate">
-				<div class="calculate__container container">
-					<div class="calculate__info">
-						<h2 class="calculate__info-title SoyuzGrotesk section-title">
-							расcчитайте тираж
-						</h2>
-						<p class="calculate__info-text">
-							Используйте наш калькулятор для быстрого расчета примерной
-							стоимости ваших проектов. Если возникнут вопросы, наша команда
-							всегда готова помочь!
-						</p>
-						<a href="" class="button hero__info-button">рассчитать</a>
-					</div>
-					<img
-						src="./src/img/calculate.png"
-						alt="calculate"
-						class="calculate__img"
-					/>
-				</div>
-			</section>
-			<section class="questions">
-				<div class="questions__container container">
-					<h2 class="questions__title SoyuzGrotesk section-title">
-						Появились вопросы?
-					</h2>
-					<p class="questions__text">Мы ответим в течении часа</p>
-					<div class="questions__info">
-						<div class="questions__info-inpus">
-							<input
-								type="text"
-								placeholder="Имя"
-								class="questions__info-inpus-input input"
-							/>
-							<input
-								type="text"
-								placeholder="Email"
-								class="questions__info-inpus-input input"
-							/>
-							<input
-								type="text"
-								placeholder="Телефон"
-								class="questions__info-inpus-input input"
-							/>
-						</div>
-						<textarea
-							name="questions__info-textarea"
-							id="questions__info-textarea"
-							placeholder="Что вас интересует?"
-							class="questions__info-textarea input"
-						></textarea>
-					</div>
-					<div class="questions__btn-container">
-						<a href="" class="button pink hero__info-button questions__btn"
-							>задать вопрос</a
+						<a href="./pages/servises.php" class="button hero__info-button hero__info-button-servises"
+							>наша продукция</a
 						>
 					</div>
 				</div>
 			</section>
+			<?php
+			// Включаем файл с формой
+			include './src/php/upload_form/upload_form.php';
+			?>
+			<?php
+			// Включаем файл с формой
+			include './src/php/calculate_form/calcilate_form.php';
+			?>
+			<?php
+			// Включаем файл с формой
+			include './src/php/question_form/question_form.php';
+			?>
 			<section class="mailing">
 				<div class="mailing__container container">
 					<h2 class="mailing__title SoyuzGrotesk section-title">
@@ -284,7 +260,7 @@
 					</a>
 					<ul class="footer__nav-menu">
 						<a
-							href="./page/about.html"
+							href="./page/about.php"
 							class="footer__nav-menu-link SoyuzGrotesk"
 							>о нас</a
 						>
@@ -344,5 +320,6 @@
 			</div>
 		</footer>
 		<script type="module" src="/main.js"></script>
+		<script type="module" src="./src/js/api_client_logos.js"></script>
 	</body>
 </html>
