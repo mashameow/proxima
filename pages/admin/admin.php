@@ -99,18 +99,20 @@ $ordersByServiceData = $ordersByServiceResult->fetch_all(MYSQLI_ASSOC);
 <body>
 <main class="admin">
   <aside class="admin__nav">
-    <a href="../../index.php" title='Вернуться на главную страницу' class="admin__nav-link"><img src="../../src/img/logoBlack.png" alt="logo" class="admin__nav-img"/></a>
+    <a href="./admin.php" title='Вернуться на главную страницу админ-панели' class="admin__nav-link"><img src="../../src/img/logoBlack.png" alt="logo" class="admin__nav-img"/></a>
     <ul class="admin__nav-list">
       <li><a href="./order.php" class="admin__nav-link  header__nav-menu-link">Заказы</a></li>
-      <li><a href="#" class="admin__nav-link  header__nav-menu-link">Пользователи</a></li>
-      <li><a href="#" class="admin__nav-link  header__nav-menu-link">Вопросы</a></li>
-      <li><a href="#" class="admin__nav-link  header__nav-menu-link">Настройки</a></li>
+      <li><a href="./users.php" class="admin__nav-link  header__nav-menu-link">Пользователи</a></li>
+      <li><a href="./questions.php" class="admin__nav-link  header__nav-menu-link">Вопросы</a></li>
+      <li><a href="./servises.php" class="admin__nav-link  header__nav-menu-link">Услуги</a></li>
+      <li><a href="./products.php" class="admin__nav-link  header__nav-menu-link">Продукция</a></li>
+      <li><a href="./status.php" class="admin__nav-link  header__nav-menu-link">Статус</a></li>
       <li><a href="../account.php" class="admin__nav-link  header__nav-menu-link">Выход</a></li>
     </ul>
   </aside>
   <section class="dashboard">
     <div class="heroHeader dashboard__heroHeader">
-      <h2 class="dashboard__title admin__tite">Админ-панель</h2>
+      <h2 class="dashboard__title admin__title">Админ-панель</h2>
       <div class="heroHeader__btn">
         <button class="exportPDF-btn gradient-btn" onclick="togglePopup()">Скачать PDF</button>
       </div>
