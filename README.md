@@ -1,6 +1,6 @@
 # 🎀проект "proxima"🎀
-<p>В качестве сборщика используется <a href="https://vitejs.dev/"><b>Vite JS<b></a></p>
 
+<p>В качестве сборщика используется <a href="https://vitejs.dev/"><b>Vite JS<b></a></p>
 
 #### Для запуска:
 
